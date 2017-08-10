@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+<trackList>
+	<track>
+      <creator>Video filmed and edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>Thunderbirds</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/AirFest08_Thunderbirds.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>
+	<track>
+      <creator>Video filmed and edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>Millennium Car Show</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/MillenniumCarShow_Full.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>
+	<track>
+      <creator>Video filmed and edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>Route66</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/Route66_2011promo.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>	
+	<track>
+      <creator>Video filmed and edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>Corona Farmers Market</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/CoronaFarmersMarket_Final.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>	
+	<track>
+      <creator>Video edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>The Antagonist</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/Antagonist_Ipod.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>	
+	<track>
+      <creator>Video edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>Everything Happens in Black and White</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/Everything+Happens+in+Black+and+White+Trailer+-+IMDb.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>
+	<track>
+      <creator>Video filmed and edited by JPPM Solutions for the Inland Empire Television Network - SoCalTelevision</creator>
+      <title>HorseTown USA - Horse week in Norco</title>
+      <location>https://s3-us-west-2.amazonaws.com/my-portfolio-videos/NorcoRodeo_Trailer.flv</location>
+      <image>/images/TelevisionTube.png</image>
+    </track>	
+</trackList>
+</playlist>
+

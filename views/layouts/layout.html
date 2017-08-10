@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel='stylesheet' href='/stylesheets/style.css' /> 
+
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/reset.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/site.css">
+
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/container.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/grid.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/header.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/image.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/menu.css">
+
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/divider.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/dropdown.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/segment.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/button.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/list.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/icon.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/sidebar.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/components/transition.css">
+	<link rel="stylesheet" href="/bower_components/semantic/dist/semantic.css">
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+	<style type="text/css">
+		.ui-menu { width: 180px; }
+		
+		.glossary_topic {
+			font-weight: bold;
+		}
+		
+		.hidden.menu {
+			display: none;
+		}
+
+		.masthead.segment {
+			min-height: 700px;
+			padding: 1em 0em;
+			
+		}
+		.masthead .logo.item img {
+			margin-right: 1em;
+		}
+		.masthead .ui.menu .ui.button {
+			margin-left: 0.5em;
+		}
+		.masthead h1.ui.header {
+			margin-top: 4em;
+			margin-bottom: 0em;
+			font-size: 4em;
+			font-weight: normal;
+		}
+		.masthead h2 {
+			font-size: 1.7em;
+			font-weight: normal;
+		}
+
+		.ui.vertical.stripe {
+			padding: 8em 0em;
+		}
+		.ui.vertical.stripe h3 {
+			font-size: 2em;
+		}
+		.ui.vertical.stripe .button + h3,
+		.ui.vertical.stripe p + h3 {
+			margin-top: 3em;
+		}
+		.ui.vertical.stripe .floated.image {
+			clear: both;
+		}
+		.ui.vertical.stripe p {
+			font-size: 1.33em;
+		}
+		.ui.vertical.stripe .horizontal.divider {
+			margin: 3em 0em;
+		}
+
+		.quote.stripe.segment {
+			padding: 0em;
+		}
+		.quote.stripe.segment .grid .column {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+
+		.footer.segment {
+			padding: 5em 0em;
+		}
+
+		.secondary.pointing.menu .toc.item {
+			display: none;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.ui.fixed.menu {
+				display: none !important;
+			}
+			.secondary.pointing.menu .item,
+			.secondary.pointing.menu .menu {
+				display: none;
+			}
+			.secondary.pointing.menu .toc.item {
+				display: block;
+			}
+			.masthead.segment {
+				min-height: 350px;
+			}
+			.masthead h1.ui.header {
+				font-size: 2em;
+				margin-top: 1.5em;
+			}
+			.masthead h2 {
+				margin-top: 0.5em;
+				font-size: 1.5em;
+			}
+		}
+		
+	</style>
+
+	<script src="/javascripts/main.js"></script>
+
+	<script src="/bower_components/semantic/examples/assets/library/jquery.min.js"></script>
+	<script src="/bower_components/semantic/dist/components/visibility.js"></script>
+	<script src="/bower_components/semantic/dist/components/sidebar.js"></script>
+	<script src="/bower_components/semantic/dist/components/transition.js"></script>
+	<script src="/bower_components/semantic/dist/semantic.js"></script>
+	<script>
+		$(document)
+		.ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+      .visibility({
+      	once: false,
+      	onBottomPassed: function() {
+      		$('.fixed.menu').transition('fade in');
+      	},
+      	onBottomPassedReverse: function() {
+      		$('.fixed.menu').transition('fade out');
+      	}
+      })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+      .sidebar('attach events', '.toc.item')
+      ;
+
+  })
+		;
+	</script>
+
+	<!-- Latest compiled and minified JavaScript --> 
+	<!-- html5 print shiv -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js" integrity="sha256-btup0J8ailzC2SIkxIm9kZnW4IlDDKihhohGVN7Nfns=" crossorigin="anonymous"></script>
+	<!-- html5shiv -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js" integrity="sha256-sqQlcOZwgKkBRRn5WvShSsuopOdq9c3U+StqgPiFhHQ=" crossorigin="anonymous"></script> 
+	<!-- jQuery minified -->
+	<script src="//code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<!-- bootstrap minified -->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+	
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Home</a>
+    <a class="item">About</a>
+    <a class="item">Shows</a>
+    <a class="item">Contact</a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a class="item">About</a>
+  <a class="item">Shows</a>
+  <a class="item">Contact</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher" ng-app="">
+
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+    <a class="active item">Home</a>
+    <a class="item">About</a>
+<!--     <a href="#" class="item" data-toggle="modal" data-target="#showlist-div">Shows</a>
+<div class="ui modal" id="showlist-div">
+  <i class="close icon"></i>
+  <div class="header">
+    Show List
+  </div>
+  <div class="content">
+    <div class="description">
+      <ul class="showLinks">
+        <li ng-repeat="showname in showlist"><a ng-ref="{{baseURL}}{{showlist.url}}">{{ showname.name }}</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+    <a class="item">Contact</a>
+        <div class="right item">
+          <a class="ui inverted button">Log in</a>
+          <a class="ui inverted button">Sign Up</a>
+        </div>
+      </div>
+    </div>
+    
+      <div class="ui text container">
+      <div ng-controller="MyController">
+      <form name="showselect">
+  <select id="showdropdownmenu" name="show_list_menu" class="ui dropdown" onchange="javascript:handleSelect(this)">
+  <option selected="selected">Shows</option>
+  <option ng-repeat="showItem in showList" ng-value="showItem.url">{{ showItem.name }}</option>
+</select>
+</form>
+
+        <h1 class="ui inverted header">
+        Welcome to {{ showname }}
+      </h1>
+      <div id="player">This is the official media site of the Inland Empire. The Inland Empire Television Network - {{ site_title }}&trade;<br>
+  <br>
+  <br> 
+  If you are viewing {{ showname }} from a Mobile Device, <br>
+  <a href="/IETVCellSite/index.html">Click Here to Download</a><br> 
+  SoCAL Television Shows to watch on your Mobile Device. </div>
+<script type="text/javascript">
+var so = new SWFObject('/IETV_mediaplayer/mediaplayer.swf','mpl','400','300','8');
+so.addParam('allowscriptaccess','always');
+so.addParam('allowfullscreen','true');
+so.addVariable('height','300');
+so.addVariable('width','400');
+so.addVariable('file','/IETV_mediaplayer/source/MainShows_Commercials.xml');
+so.addVariable('id','IETVonline');
+so.addVariable('backcolor','0x009900');
+so.addVariable('frontcolor','0xFFFFFF');
+so.addVariable('lightcolor','0xFFFFFF');
+so.addVariable('screencolor','0x666666');
+so.addVariable('bufferlength','9.0');
+so.addVariable('captions','The Official Inland Empire Television Network - SoCalTelevision.com');
+so.addVariable('volume','75');
+so.addVariable('link','http://www.socaltelevision.com');
+so.addVariable('linktarget','_blank');
+so.addVariable('searchbar','false');
+so.addVariable('showicons','true');
+so.addVariable('autostart','false');
+so.addVariable('enablejs','true');
+so.addVariable("skin", "/IETV_mediaplayer/IETVonline_playerSkin1.swf");
+so.write('player');
+</script>
+        
+
+
+
+        <h2 class="subtext">{{ site_title }} - Venturing throughout Southern California to bring you   Entertainment including Restaurant &amp; Hotel Reviews, Special Attractions &amp;   Events Live, The Latest Tech &amp; Local News that effects you!</h2>
+        <!-- <div class="ui huge primary button">Watch SoCalTelevision<i class="right   arrow icon"></i></div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">About</a>
+            <a href="#" class="item">Channel Guide</a>
+            <a href="#" class="item">Shows</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">WATCH LIVE</a>
+            <a href="#" class="item">SoCal Community Connection</a>
+            <a href="#" class="item">Advertise / Showcase your Event</a>
+            <a href="#" class="item">Contact Us</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header"></h4>
+          <p>Find out what's going on in your area, LIKE - FOLLOW - SHARE @SoCalTelevision on <a href="https://www.facebook.com/SoCalTelevision/" target="_blank">Facebook</a>, <a href="https://www.instagram.com/SoCalTelevision/" target="_blank">Instagram</a>, &amp; <a href="https://www.twitter.com/SoCalTelevision/" target="_blank">Twitter!</a></p>
+          <p>&copy; 2017 - The Inland Empire Television Network - SoCalTelevision<br/>Content may not be replicated, duplicated, or rebroadcasted in any way, both in part or full, without expressed written consent from the Inland Empire Television Network or its subsidiary's - All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- END app -->
+
+
+
+	{{> footer }}
+	<!-- TV Show Navigation JQuery handler -->
+<script>
+      $( document ).ready(function() {
+        $( "#showdropdownmenu" ).change(function() {
+          var address = $(this).val();
+          window.location.replace(address);
+        });
+      });
+    </script>
+</body>
+</html>

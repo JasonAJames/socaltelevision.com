@@ -25,12 +25,12 @@ require('./config/passport');
 
 // view engine setup
 //Angular
-// app.set('view engine', 'html');
-// app.engine('html', require('hbs').__express);
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
 
 // HandlebarsJS
-app.engine('.hbs'||'.html', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
-app.set('view engine', '.hbs');
+// app.engine('.hbs'||'.html', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
+// app.set('view engine', '.hbs');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
